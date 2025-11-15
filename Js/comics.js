@@ -1,0 +1,203 @@
+// Comic Book Data
+const comics = [
+    {
+        id: 1,
+        title: "The Amazing Spider-Man #850",
+        publisher: "Marvel",
+        genre: "Superhero",
+        price: 4.99,
+        rating: 4.8,
+        image: "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?w=800&h=1200&fit=crop",
+        synopsis: "Peter Parker swings into action as the spectacular Spider-Man! Join him as he battles the Sinister Six while juggling his personal life, relationships, and responsibilities as New York's favorite wall-crawler. A massive anniversary issue with shocking revelations!",
+        creators: "Written by Zeb Wells, Art by John Romita Jr.",
+        releaseDate: "2024-10-15",
+        featured: true
+    },
+    {
+        id: 2,
+        title: "Batman: Detective Comics #1000",
+        publisher: "DC",
+        genre: "Superhero",
+        price: 5.99,
+        rating: 4.9,
+        image: "https://images.unsplash.com/photo-1608889476561-6242cfdbf622?w=800&h=1200&fit=crop",
+        synopsis: "The World's Greatest Detective faces his most challenging case yet. Gotham City is under siege from a mysterious new villain who knows all of Batman's secrets. Can Bruce Wayne protect his city and his identity?",
+        creators: "Written by Tom King, Art by Tony S. Daniel",
+        releaseDate: "2024-10-20",
+        featured: true
+    },
+    {
+        id: 3,
+        title: "Wonder Woman #800",
+        publisher: "DC",
+        genre: "Superhero",
+        price: 4.99,
+        rating: 4.7,
+        image: "https://images.unsplash.com/photo-1635805737707-575885ab0820?w=800&h=1200&fit=crop",
+        synopsis: "Diana Prince defends truth and justice in a world that needs heroes more than ever. Ancient gods and modern threats collide as Wonder Woman faces her greatest challenge. An epic celebration of the Amazon Princess!",
+        creators: "Written by Tom King, Art by Daniel Sampere",
+        releaseDate: "2024-10-18",
+        featured: false
+    },
+    
+    {
+        id: 5,
+        title: "The Flash: Speed Force #1",
+        publisher: "DC",
+        genre: "Superhero",
+        price: 4.49,
+        rating: 4.5,
+        image: "https://images.unsplash.com/photo-1531259683007-016a7b628fc3?w=800&h=1200&fit=crop",
+        synopsis: "Barry Allen races through time itself to prevent a catastrophic future. The Fastest Man Alive has never run this fast! A time-bending adventure that will change the DC Universe forever!",
+        creators: "Written by Joshua Williamson, Art by Carmine Di Giandomenico",
+        releaseDate: "2024-10-22",
+        featured: false
+    },
+    {
+        id: 6,
+        title: "Saga Volume 10",
+        publisher: "Image",
+        genre: "Sci-Fi",
+        price: 14.99,
+        rating: 4.9,
+        image: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=800&h=1200&fit=crop",
+        synopsis: "An epic space opera/fantasy mashup. Two soldiers from opposite sides of a never-ending galactic war fall in love and risk everything to bring their child safely into a hostile universe. The award-winning series continues!",
+        creators: "Written by Brian K. Vaughan, Art by Fiona Staples",
+        releaseDate: "2024-10-01",
+        featured: false
+    },
+    {
+        id: 7,
+        title: "The Walking Dead Deluxe #75",
+        publisher: "Image",
+        genre: "Horror",
+        price: 3.99,
+        rating: 4.7,
+        image: "https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=800&h=1200&fit=crop",
+        synopsis: "In a world ruled by the dead, survival depends on the living. Rick Grimes leads a band of survivors through the zombie apocalypse. Newly colorized classic issues with exclusive behind-the-scenes content!",
+        creators: "Written by Robert Kirkman, Art by Charlie Adlard",
+        releaseDate: "2024-09-25",
+        featured: false
+    },
+    {
+        id: 8,
+        title: "Thor: God of Thunder #25",
+        publisher: "Marvel",
+        genre: "Fantasy",
+        price: 5.99,
+        rating: 4.8,
+        image: "https://images.unsplash.com/photo-1608889825103-eb5ed706fc64?w=800&h=1200&fit=crop",
+        synopsis: "The Mighty Thor wields Mjolnir against cosmic threats! Asgardian legends meet modern heroism in this epic tale. Thor must face an ancient enemy that threatens all nine realms!",
+        creators: "Written by Jason Aaron, Art by Esad Ribić",
+        releaseDate: "2024-10-12",
+        featured: true
+    },
+    
+    
+    {
+        id: 11,
+        title: "Black Panther #1",
+        publisher: "Marvel",
+        genre: "Superhero",
+        price: 4.99,
+        rating: 4.9,
+        image: "https://images.unsplash.com/photo-1635805737707-575885ab0820?w=800&h=1200&fit=crop",
+        synopsis: "T'Challa, King of Wakanda, protects his nation from enemies both foreign and domestic. Advanced technology meets ancient tradition in this thrilling new series launch!",
+        creators: "Written by Eve L. Ewing, Art by Chris Allen",
+        releaseDate: "2024-11-01",
+        featured: false
+    },
+    {
+        id: 12,
+        title: "Aquaman: King of Atlantis #1",
+        publisher: "DC",
+        genre: "Superhero",
+        price: 4.49,
+        rating: 4.6,
+        image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=1200&fit=crop",
+        synopsis: "Arthur Curry must unite the surface world and Atlantis against an ancient evil rising from the deepest ocean trenches. The true king returns in this epic underwater adventure!",
+        creators: "Written by Jeremy Adams, Art by John Timms",
+        releaseDate: "2024-10-30",
+        featured: false
+    },
+    
+    
+    {
+        id: 15,
+        title: "Green Lantern #1",
+        publisher: "DC",
+        genre: "Superhero",
+        price: 4.99,
+        rating: 4.8,
+        image: "https://images.unsplash.com/photo-1531259683007-016a7b628fc3?w=800&h=1200&fit=crop",
+        synopsis: "Hal Jordan and the Green Lantern Corps face their darkest hour when the Central Power Battery begins to fail. Can willpower alone save the universe?",
+        creators: "Written by Jeremy Adams, Art by Xermanico",
+        releaseDate: "2024-11-08",
+        featured: false
+    },
+    {
+        id: 16,
+        title: "Spawn #350",
+        publisher: "Image",
+        genre: "Horror",
+        price: 7.99,
+        rating: 4.8,
+        image: "https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=800&h=1200&fit=crop",
+        synopsis: "Al Simmons returns from Hell to discover the world has changed. The longest-running independent comic continues with this milestone issue featuring multiple covers!",
+        creators: "Written by Todd McFarlane, Art by Carlo Barberi",
+        releaseDate: "2024-10-10",
+        featured: false
+    },
+    {
+        id: 17,
+        title: "Avengers #1",
+        publisher: "Marvel",
+        genre: "Superhero",
+        price: 5.99,
+        rating: 4.9,
+        image: "https://images.unsplash.com/photo-1635863138275-d9b33299680b?w=800&h=1200&fit=crop",
+        synopsis: "Earth's Mightiest Heroes assemble! When a cosmic threat endangers reality itself, Iron Man, Captain America, Thor, and more must unite. A bold new era begins!",
+        creators: "Written by Jed MacKay, Art by C.F. Villa",
+        releaseDate: "2024-11-12",
+        featured: false
+    },
+    {
+        id: 18,
+        title: "Justice League #75",
+        publisher: "DC",
+        genre: "Superhero",
+        price: 5.99,
+        rating: 4.8,
+        image: "https://images.unsplash.com/photo-1608889335941-32ac5f2041b9?w=800&h=1200&fit=crop",
+        synopsis: "The World's Greatest Heroes face the Dark Army! Superman, Batman, Wonder Woman and the entire Justice League must prevent the end of the multiverse!",
+        creators: "Written by Brian Michael Bendis, Art by David Marquez",
+        releaseDate: "2024-11-15",
+        featured: false
+    },
+    {
+        id: 19,
+        title: "Daredevil #1",
+        publisher: "Marvel",
+        genre: "Superhero",
+        price: 4.99,
+        rating: 4.9,
+        image: "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?w=800&h=1200&fit=crop",
+        synopsis: "Matt Murdock is back in Hell's Kitchen! The Man Without Fear faces a new crime wave that threatens to destroy everything he's fought to protect. Street-level heroics at its finest!",
+        creators: "Written by Saladin Ahmed, Art by Aaron Kuder",
+        releaseDate: "2024-11-20",
+        featured: false
+    },
+    {
+        id: 20,
+        title: "The Sandman: Overture Deluxe",
+        publisher: "DC",
+        genre: "Fantasy",
+        price: 29.99,
+        rating: 4.9,
+        image: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=800&h=1200&fit=crop",
+        synopsis: "Neil Gaiman returns to the world of dreams! The prequel to the groundbreaking original series reveals the events that shaped Dream of the Endless. A masterpiece of modern comics!",
+        creators: "Written by Neil Gaiman, Art by J.H. Williams III",
+        releaseDate: "2024-09-20",
+        featured: false
+    }
+];

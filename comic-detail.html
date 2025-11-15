@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comic Details - ComicVerse Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo" onclick="window.location.href='index.html'">
+                <div class="logo-icon">⚡</div>
+                <h1>ComicVerse</h1>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="browse.html">Browse</a>
+                <a href="cart.html">Cart <span id="cart-count" class="cart-badge">0</span></a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="browse.html">Browse</a>
+        <a href="cart.html">Cart</a>
+    </div>
+
+    <!-- Comic Detail Section -->
+    <section class="detail-section">
+        <div class="container">
+            <a href="browse.html" class="back-link">← Back to Browse</a>
+            
+            <div class="detail-container" id="comicDetail">
+                <!-- Example dynamic structure populated by JS -->
+                <!--
+                <div class="comic-cover">
+                    <img src="images/comic1.jpg" alt="Comic Title">
+                </div>
+                <div class="comic-info">
+                    <h2>Comic Title</h2>
+                    <p>Publisher: Marvel</p>
+                    <p>Creators: Writer, Artist</p>
+                    <p>Release Date: 2024-01-01</p>
+                    <p>Price: $9.99</p>
+                    <p class="comic-synopsis">Detailed synopsis goes here...</p>
+                    <button class="btn-primary" onclick="addToCart(comic.id)">Add to Cart</button>
+                </div>
+                -->
+            </div>
+
+            <!-- Related Comics -->
+            <div class="related-section">
+                <h2 class="section-title">Related Comics</h2>
+                <div class="comic-grid" id="relatedComics">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 ComicVerse Hub. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/comics.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

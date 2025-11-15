@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComicVerse Hub - Your Ultimate Comic Store</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">⚡</div>
+                <h1>ComicVerse</h1>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="browse.html">Browse</a>
+                <a href="cart.html">Cart <span id="cart-count" class="cart-badge">0</span></a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="active">Home</a>
+        <a href="browse.html">Browse</a>
+        <a href="cart.html">Cart</a>
+    </div>
+
+    <!-- Hero Carousel -->
+    <section class="hero-carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?w=1920&h=1080&fit=crop" alt="Spider-Man Comic">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-content">
+                    <span class="badge">NEW RELEASE</span>
+                    <h2>Spider-Man: Into the Spider-Verse</h2>
+                    <p>New York's Favorite Wall-Crawler Returns!</p>
+                    <a href="comic-detail.html?id=1" class="btn-primary">Read More</a>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1608889476561-6242cfdbf622?w=1920&h=1080&fit=crop" alt="Batman Comic">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-content">
+                    <span class="badge">BESTSELLER</span>
+                    <h2>Batman: The Dark Knight Returns</h2>
+                    <p>Gotham's Guardian Rises Again</p>
+                    <a href="comic-detail.html?id=2" class="btn-primary">Read More</a>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1612036782143-f7b95ec3da52?w=1920&h=1080&fit=crop" alt="X-Men Comic">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-content">
+                    <span class="badge">FEATURED</span>
+                    <h2>X-Men: Days of Future Past</h2>
+                    <p>The Mutant Saga Continues</p>
+                    <a href="comic-detail.html?id=4" class="btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-btn prev" id="prevBtn">‹</button>
+        <button class="carousel-btn next" id="nextBtn">›</button>
+        <div class="carousel-indicators" id="carouselIndicators"></div>
+    </section>
+
+    <!-- New Releases -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="icon">🔥</span>
+                <h2>New Releases</h2>
+            </div>
+            <div class="comic-grid" id="newReleases">
+                <!-- Populated by JavaScript -->
+            </div>
+            <div class="section-footer">
+                <a href="browse.html" class="btn-secondary">View All Comics</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Series -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <span class="icon">⭐</span>
+                <h2>Popular Series</h2>
+            </div>
+            <div class="comic-grid" id="popularSeries">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Publisher Spotlights -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Publisher Spotlights</h2>
+            <div class="publisher-grid">
+                <div class="publisher-card" onclick="window.location.href='browse.html?publisher=Marvel'">
+                    <img src="https://images.unsplash.com/photo-1635863138275-d9b33299680b?w=600&h=400&fit=crop" alt="Marvel Comics">
+                    <div class="publisher-overlay">
+                        <h3>Marvel Comics</h3>
+                        <p>Explore the Marvel Universe</p>
+                    </div>
+                </div>
+                <div class="publisher-card" onclick="window.location.href='browse.html?publisher=DC'">
+                    <img src="https://images.unsplash.com/photo-1608889335941-32ac5f2041b9?w=600&h=400&fit=crop" alt="DC Comics">
+                    <div class="publisher-overlay">
+                        <h3>DC Comics</h3>
+                        <p>Heroes & Legends of DC</p>
+                    </div>
+                </div>
+                <div class="publisher-card" onclick="window.location.href='browse.html?publisher=Image'">
+                    <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=600&h=400&fit=crop" alt="Image Comics">
+                    <div class="publisher-overlay">
+                        <h3>Image Comics</h3>
+                        <p>Independent & Bold Stories</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📚</div>
+                    <div class="stat-value">15,000+</div>
+                    <div class="stat-label">Comics</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-value">500K+</div>
+                    <div class="stat-label">Readers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-value">50K+</div>
+                    <div class="stat-label">Reviews</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">❤️</div>
+                    <div class="stat-value">100K+</div>
+                    <div class="stat-label">Favorites</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 ComicVerse Hub. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon">F</a>
+                    <a href="#" class="social-icon">T</a>
+                    <a href="#" class="social-icon">I</a>
+                    <a href="#" class="social-icon">D</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/comics.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

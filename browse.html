@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Comics - ComicVerse Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome for footer icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papTcX0H7xX+O+vWxZ0ghsxYw5U8Hk9+5Z5PZ6VxwKNu6/2DxGZPV+G8ZLhTn0xt/3e2u4Aqv3v2vU3y2tLwg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo" onclick="window.location.href='index.html'">
+                <div class="logo-icon">⚡</div>
+                <h1>ComicVerse</h1>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="browse.html" class="active">Browse</a>
+                <a href="cart.html">Cart <span id="cart-count" class="cart-badge">0</span></a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="browse.html" class="active">Browse</a>
+        <a href="cart.html">Cart</a>
+    </div>
+
+    <!-- Browse Section -->
+    <section class="browse-section">
+        <div class="container">
+            <h1 class="page-title">Browse Comics</h1>
+            
+            <!-- Filters -->
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label for="publisherFilter">Publisher:</label>
+                    <select id="publisherFilter" class="filter-select">
+                        <option value="all">All Publishers</option>
+                        <option value="Marvel">Marvel</option>
+                        <option value="DC">DC</option>
+                        <option value="Image">Image</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="genreFilter">Genre:</label>
+                    <select id="genreFilter" class="filter-select">
+                        <option value="all">All Genres</option>
+                        <option value="Superhero">Superhero</option>
+                        <option value="Sci-Fi">Sci-Fi</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Fantasy">Fantasy</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="sortFilter">Sort By:</label>
+                    <select id="sortFilter" class="filter-select">
+                        <option value="title">Title (A-Z)</option>
+                        <option value="price-low">Price (Low to High)</option>
+                        <option value="price-high">Price (High to Low)</option>
+                        <option value="rating">Rating</option>
+                        <option value="date">Release Date</option>
+                    </select>
+                </div>
+
+                <button class="btn-reset" id="resetFilters">Reset Filters</button>
+            </div>
+
+            <!-- Results Count -->
+            <div class="results-info">
+                <p>Showing <span id="resultsCount">0</span> comics</p>
+            </div>
+
+            <!-- Comic Grid -->
+            <div class="comic-grid-large" id="comicGrid">
+                <!-- Populated by JavaScript -->
+                <!-- Example card structure for JS to populate:
+                <div class="comic-card">
+                    <a href="comic-detail.html?id=1">
+                        <img src="images/comic1.jpg" alt="Comic Title">
+                        <h3 class="comic-title">Comic Title</h3>
+                        <p class="comic-price">$9.99</p>
+                    </a>
+                </div>
+                -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 ComicVerse Hub. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/comics.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

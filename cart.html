@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - ComicVerse Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome for Social Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo" onclick="window.location.href='index.html'">
+                <div class="logo-icon">⚡</div>
+                <h1>ComicVerse</h1>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="browse.html">Browse</a>
+                <a href="cart.html" class="active">Cart <span id="cart-count" class="cart-badge">0</span></a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="browse.html">Browse</a>
+        <a href="cart.html" class="active">Cart</a>
+    </div>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <div class="container">
+            <h1 class="page-title">Shopping Cart</h1>
+            
+            <div class="cart-container">
+                <!-- Cart Items -->
+                <div class="cart-items" id="cartItems">
+                    <!-- Populated by JavaScript -->
+                    <!-- Example item template: 
+                    <div class="cart-item">
+                        <img src="images/comic1.jpg" alt="Comic Title" class="cart-item-img">
+                        <div class="cart-item-info">
+                            <h3>Comic Title</h3>
+                            <p>Price: $xx.xx</p>
+                            <input type="number" value="1" min="1" class="quantity-input">
+                            <button class="remove-btn">Remove</button>
+                        </div>
+                    </div>
+                    -->
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary">
+                    <h2>Order Summary</h2>
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Tax (10%):</span>
+                        <span id="tax">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping:</span>
+                        <span id="shipping">$5.99</span>
+                    </div>
+                    <div class="summary-divider"></div>
+                    <div class="summary-row summary-total">
+                        <span>Total:</span>
+                        <span id="total">$0.00</span>
+                    </div>
+                    <button class="btn-checkout" id="checkoutBtn">Proceed to Checkout</button>
+                    <a href="browse.html" class="btn-continue">Continue Shopping</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content">
+            <span class="modal-close" id="modalClose">&times;</span>
+            <div class="modal-icon">🎉</div>
+            <h2>Thank You for Your Order!</h2>
+            <p>This is a simulated checkout. Your order has been placed successfully!</p>
+            <div class="modal-details" id="modalDetails"></div>
+            <button class="btn-primary" onclick="window.location.href='index.html'">Return to Home</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 ComicVerse Hub. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/comics.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Optional inline JS for hover zoom effect -->
+    <script>
+        // Add hover zoom effect to dynamically added images
+        document.addEventListener('mouseover', function(e){
+            if(e.target.classList.contains('cart-item-img')){
+                e.target.style.transform = 'scale(1.1)';
+                e.target.style.transition = 'transform 0.3s ease';
+            }
+        });
+        document.addEventListener('mouseout', function(e){
+            if(e.target.classList.contains('cart-item-img')){
+                e.target.style.transform = 'scale(1)';
+            }
+        });
+    </script>
+</body>
+</html>
